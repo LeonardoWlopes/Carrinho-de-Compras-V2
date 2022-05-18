@@ -44,7 +44,7 @@ function CartProvider({ children }: IProps) {
 
   //fetch API data
   useEffect(() => {
-    fetch("http://localhost:3000/api/products")
+    fetch("/api/products")
       .then((response) => response.json())
       .then((response) => setItems(response))
       .catch((error) => console.log("Error on fetch data", error));
