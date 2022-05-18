@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-  width: 415px;
+  max-width: 415px;
   height: 750px;
   background: ${({ theme }) => theme.COLORS.BACKGROUND.primary};
   margin: auto;

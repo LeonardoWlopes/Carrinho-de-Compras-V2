@@ -1,17 +1,17 @@
 import { useContext, useEffect, useState } from "react";
-import * as S from "./styles";
+import * as S from "../src/styles/cart";
 
 //types
 import type { NextPage } from "next";
 
 //context
-import { CartContext } from "../../src/contexts/CartContext";
+import { CartContext } from "../src/contexts/CartContext";
 
 //components
-import { ShopItems } from "../../src/components/ShopItems";
+import { ShopItems } from "../src/components/ShopItems";
 
 //utils
-import { currencyConverter } from "../../src/utils/currencyConverter";
+import { currencyConverter } from "../src/utils/currencyConverter";
 
 const Cart: NextPage = () => {
   const { cart } = useContext(CartContext);

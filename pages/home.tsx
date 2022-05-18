@@ -1,14 +1,14 @@
 import { useContext } from "react";
-import * as S from "./styles";
+import * as S from "../src/styles/home";
 
 //types
 import type { NextPage } from "next";
 
 //context
-import { CartContext } from "../../src/contexts/CartContext";
+import { CartContext } from "../src/contexts/CartContext";
 
 //components
-import { ShopItems } from "../../src/components/ShopItems";
+import { ShopItems } from "../src/components/ShopItems";
 
 const Home: NextPage = () => {
   const { items } = useContext(CartContext);

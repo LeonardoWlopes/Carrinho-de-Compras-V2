@@ -38,7 +38,8 @@ export const Footer = styled.div`
     font-weight: bolder;
     height: 55px;
     margin: auto;
-    width: 357px;
+    width: 100%;
+    max-width: 357px;
     cursor: pointer;
     transition: 0.1s;
 
