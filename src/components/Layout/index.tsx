@@ -12,11 +12,12 @@ import Image from "next/image";
 
 //context
 import { CartContext } from "../../contexts/CartContext";
+import Head from "next/head";
 
 function Layout({ children }: IProps) {
   const router = useRouter();
 
-  const {cart} = useContext(CartContext);
+  const { cart } = useContext(CartContext);
 
   const pageName = router.pathname.slice(1);
 
@@ -25,28 +26,33 @@ function Layout({ children }: IProps) {
   }
 
   return (
-    <S.Container>
-      <S.Card>
-        <S.Header>
-          <h1>{pageName === "cart" ? "Meu Carrinho" : pageName}</h1>
-        </S.Header>
-        <S.SwitchContainer>
-          <span>{cart.length}</span>
-          <Image
-            onClick={handleMove}
-            src={
-              pageName === "home"
-                ? "/icons/bx-shopping-bag.svg"
-                : "/icons/bx-home-alt.svg"
-            }
-            width="30"
-            height="30"
-            alt=""
-          />
-        </S.SwitchContainer>
-        <S.Body>{children}</S.Body>
-      </S.Card>
-    </S.Container>
+    <>
+      <Head>
+        <title>Carrinho de compras</title>
+      </Head>
+      <S.Container>
+        <S.Card>
+          <S.Header>
+            <h1>{pageName === "cart" ? "Meu Carrinho" : pageName}</h1>
+          </S.Header>
+          <S.SwitchContainer>
+            <span>{cart.length}</span>
+            <Image
+              onClick={handleMove}
+              src={
+                pageName === "home"
+                  ? "/icons/bx-shopping-bag.svg"
+                  : "/icons/bx-home-alt.svg"
+              }
+              width="30"
+              height="30"
+              alt=""
+            />
+          </S.SwitchContainer>
+          <S.Body>{children}</S.Body>
+        </S.Card>
+      </S.Container>
+    </>
   );
 }
 
