@@ -1,10 +1,18 @@
 function currencyConverter(value: number) {
-  const formattedValue = Intl.NumberFormat("pt-br", {
+  const stringNumber = value.toString();
+
+  const formattedValue = parseFloat(
+    stringNumber.substring(0, stringNumber.length - 2) +
+      "." +
+      stringNumber.substring(stringNumber.length - 2)
+  );
+
+  const currencyValue = Intl.NumberFormat("pt-br", {
     style: "currency",
     currency: "brl",
-  }).format(value);
+  }).format(formattedValue);
 
-  return formattedValue
+  return currencyValue;
 }
 
 export { currencyConverter };

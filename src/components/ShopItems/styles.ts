@@ -48,6 +48,7 @@ export const ItemName = styled.span`
 
 export const ItemPrice = styled.span`
   font-size: 12px;
+  color: ${({ theme }) => theme.COLORS.TEXT.secondary};
 `;
 
 export const ItemSellPrice = styled.span`

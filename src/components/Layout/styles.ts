@@ -41,4 +41,8 @@ export const SwitchContainer = styled.div`
   justify-content: end;
   margin: 8px 0px;
   padding: 0 10px;
+
+  img {
+    cursor: pointer;
+  }
 `;

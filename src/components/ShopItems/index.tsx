@@ -1,17 +1,31 @@
-import Image from "next/image";
+import { useContext } from "react";
 import * as S from "./styles";
+
+import Image from "next/image";
 
 //types
 import { IItems } from "../../types/Items.interface";
-import { currencyConverter } from "../../utils/currencyConverter";
 
 type IProps = {
   item: IItems;
+  sell?: boolean;
 };
 
-function ShopItems({ item }: IProps) {
+//context
+import { CartContext } from "../../contexts/CartContext";
+
+//utils
+import { currencyConverter } from "../../utils/currencyConverter";
+
+function ShopItems({ item, sell }: IProps) {
+  const { addItemToCart, removeItemToCart } = useContext(CartContext);
+
+  function handleChangeCart() {
+    sell ? removeItemToCart(item.uniqueId) : addItemToCart(item.uniqueId);
+  }
+
   return (
-    <S.Container>
+    <S.Container onClick={handleChangeCart}>
       <S.ImageContainer>
         <Image src={item.imageUrl} width="100%" height="100%" alt={item.name} />
       </S.ImageContainer>

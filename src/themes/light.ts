@@ -14,7 +14,8 @@ const light = {
       dark: "#247a00",
     },
     BLUE: {
-      dark: "#3b74f2",
+      light: "#3b74f2",
+      dark: "#3164D1",
     },
   },
 };
