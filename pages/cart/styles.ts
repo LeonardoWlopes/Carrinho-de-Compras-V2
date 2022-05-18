@@ -8,6 +8,16 @@ export const Container = styled.div`
   height: 100%;
 `;
 
+export const NoItems = styled.div`
+  height: 100%;
+  display: flex;
+
+  h3 {
+    margin: auto;
+    text-align: center;
+  }
+`;
+
 export const Content = styled.div`
   height: 450px;
   overflow-y: auto;

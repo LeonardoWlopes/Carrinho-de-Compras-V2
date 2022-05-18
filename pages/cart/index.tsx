@@ -30,6 +30,16 @@ const Cart: NextPage = () => {
     }
   }, [cart]);
 
+  if (!cart[0]) {
+    return (
+      <S.Container>
+        <S.NoItems>
+          <h3>Sem items em seu carrinho, experimente adicionar alguns!</h3>
+        </S.NoItems>
+      </S.Container>
+    );
+  }
+
   return (
     <S.Container>
       <S.Content>
