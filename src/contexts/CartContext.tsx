@@ -26,6 +26,8 @@ function CartProvider({ children }: IProps) {
     const item = items.find((item) => item.uniqueId === id);
     const alreadyExist = cart.find((item) => item.uniqueId === id);
 
+    alreadyExist && alert("Item ja existente no carrinho");
+
     if (item && !alreadyExist) {
       const newCart = cart.concat(item);
 
@@ -39,7 +41,7 @@ function CartProvider({ children }: IProps) {
       return item.uniqueId !== id;
     });
 
-    setCart(newCart)
+    setCart(newCart);
   }
 
   //fetch API data

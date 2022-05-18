@@ -57,7 +57,7 @@ const Cart: NextPage = () => {
             <span>Parabéns, sua compra tem frete grátis !</span>
           </S.PopUp>
         </S.TotalContainer>
-        <button>Finalizar compra</button>
+        <button onClick={() => alert('Mande o feedback para leonardolopessocial@gmail.com')}>Finalizar compra</button>
       </S.Footer>
     </S.Container>
   );
