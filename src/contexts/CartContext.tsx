@@ -1,10 +1,10 @@
 import React, { createContext, useEffect, useState } from "react";
 
 //types
-import { IDb } from "../types/Items.interface";
+import { IItems } from "../types/Items.interface";
 
 type ICartContext = {
-  items: IDb[];
+  items: IItems[];
 };
 
 type IProps = {
@@ -15,13 +15,14 @@ type IProps = {
 const CartContext = createContext({} as ICartContext);
 
 function CartProvider({ children }: IProps) {
-  const [items, setItems] = useState<IDb[]>([]);
+  const [items, setItems] = useState<IItems[]>([]);
 
   //fetch API data
   useEffect(() => {
     fetch("http://localhost:3000/api/products")
       .then((response) => response.json())
-      .then((response) => setItems(response));
+      .then((response) => setItems(response))
+      .catch((error) => console.log("Error on fetch data", error));
   }, []);
 
   return (

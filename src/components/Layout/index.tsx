@@ -26,7 +26,6 @@ function Layout({ children }: IProps) {
         <S.Header>
           <h1>{pageName === 'cart'? 'Meu Carrinho': pageName}</h1>
         </S.Header>
-        <S.Body>
           <S.SwitchContainer>
             <Image
               onClick={handleMove}
@@ -40,6 +39,7 @@ function Layout({ children }: IProps) {
               alt=""
             />
           </S.SwitchContainer>
+        <S.Body>
           {children}
         </S.Body>
       </S.Card>

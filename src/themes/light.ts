@@ -3,10 +3,11 @@ const light = {
     BACKGROUND: {
       main: "#d1d8e5",
       primary: "#ffffff",
+      hoverPrimary: "#e6e6e6",
     },
     TEXT: {
       primary: "#000000",
-      secondary: "#a5a5ab",
+      secondary: "#b3c1d7",
     },
     GREEN: {
       light: "#c7ffa6",

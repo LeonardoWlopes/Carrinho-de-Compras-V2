@@ -27,4 +27,24 @@ a {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #b3afb3;
+    border-radius: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b3afb3;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px #f0f0f0;
+  }
 `;

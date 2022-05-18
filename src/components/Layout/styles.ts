@@ -31,8 +31,7 @@ export const Header = styled.header`
 `;
 
 export const Body = styled.div`
-  //background: red;
-  height: 100%;
+  height: 620px;
   padding: 0px 12px;
 `;
 
@@ -40,6 +39,6 @@ export const SwitchContainer = styled.div`
   //background: blue;
   display: flex;
   justify-content: end;
-  margin-top: 8px;
+  margin: 8px 0px;
   padding: 0 10px;
 `;
